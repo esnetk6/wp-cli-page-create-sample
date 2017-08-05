@@ -1,5 +1,8 @@
 # wp-cli-page-create-sample
 
+WP-CLIを使用して、企業サイトによくある形の固定ページを自動生成します。
+
+
 ## Wocker
 
 ### 1. Download
