@@ -1,1 +1,29 @@
 <p>会社概要</p>
+
+<table>
+	<tbody>
+		<tr>
+			<th>社名</th>
+			<td>***</td>
+		</tr>
+		<tr>
+			<th>所在地</th>
+			<td>
+				〒000-0000<br>
+				東京都***
+			</td>
+		</tr>
+		<tr>
+			<th>代表</th>
+			<td>***</td>
+		</tr>
+		<tr>
+			<th>創業</th>
+			<td>***</td>
+		</tr>
+		<tr>
+			<th>資本金</th>
+			<td>***</td>
+		</tr>
+	</tbody>
+</table>
