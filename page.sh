@@ -53,34 +53,34 @@ esac
 # 
 
 # 会社概要
-$PREFIX wp post create page-contents/company.txt --post_title="会社概要" --post_name="company" --post_type="page" --post_status="publish" --page_template="default"
+$PREFIX wp post create page-contents/company.txt --post_title="会社概要" --post_name="company" --post_type="page" --post_status="publish" --page_template="default" --user="1"
 
 # 会社概要 / ご挨拶
-$PREFIX wp post create page-contents/company-message.txt --post_title="ご挨拶" --post_name="message" --post_type="page" --post_status="publish" --page_template="default" --post_parent=$($PREFIX wp post list --post_type="page" --field="ID" --name="company")
+$PREFIX wp post create page-contents/company-message.txt --post_title="ご挨拶" --post_name="message" --post_type="page" --post_status="publish" --page_template="default" --user="1" --post_parent=$($PREFIX wp post list --post_type="page" --field="ID" --name="company")
 
 # 会社概要 / 沿革
-$PREFIX wp post create page-contents/company-history.txt --post_title="沿革" --post_name="history" --post_type="page" --post_status="publish" --page_template="default" --post_parent=$($PREFIX wp post list --post_type="page" --field="ID" --name="company")
+$PREFIX wp post create page-contents/company-history.txt --post_title="沿革" --post_name="history" --post_type="page" --post_status="publish" --page_template="default" --user="1" --post_parent=$($PREFIX wp post list --post_type="page" --field="ID" --name="company")
 
 # アクセス
-$PREFIX wp post create page-contents/access.txt --post_title="アクセス" --post_name="access" --post_type="page" --post_status="publish" --page_template="default"
+$PREFIX wp post create page-contents/access.txt --post_title="アクセス" --post_name="access" --post_type="page" --post_status="publish" --page_template="default" --user="1"
 
 # 施設案内
-$PREFIX wp post create page-contents/facility.txt --post_title="施設案内" --post_name="facility" --post_type="page" --post_status="publish" --page_template="default"
+$PREFIX wp post create page-contents/facility.txt --post_title="施設案内" --post_name="facility" --post_type="page" --post_status="publish" --page_template="default" --user="1"
 
 # 業務内容
-$PREFIX wp post create page-contents/business.txt --post_title="業務内容" --post_name="business" --post_type="page" --post_status="publish" --page_template="default"
+$PREFIX wp post create page-contents/business.txt --post_title="業務内容" --post_name="business" --post_type="page" --post_status="publish" --page_template="default" --user="1"
 
 # 求人情報
-$PREFIX wp post create page-contents/recruit.txt --post_title="求人情報" --post_name="recruit" --post_type="page" --post_status="publish" --page_template="default"
+$PREFIX wp post create page-contents/recruit.txt --post_title="求人情報" --post_name="recruit" --post_type="page" --post_status="publish" --page_template="default" --user="1"
 
 # よくあるご質問
-$PREFIX wp post create page-contents/faq.txt --post_title="よくあるご質問" --post_name="faq" --post_type="page" --post_status="publish" --page_template="default"
+$PREFIX wp post create page-contents/faq.txt --post_title="よくあるご質問" --post_name="faq" --post_type="page" --post_status="publish" --page_template="default" --user="1"
 
 # お問い合わせ
-$PREFIX wp post create page-contents/contact.txt --post_title="お問い合わせ" --post_name="contact" --post_type="page" --post_status="publish" --page_template="default"
+$PREFIX wp post create page-contents/contact.txt --post_title="お問い合わせ" --post_name="contact" --post_type="page" --post_status="publish" --page_template="default" --user="1"
 
 # サイトマップ
-$PREFIX wp post create page-contents/sitemap.txt --post_title="サイトマップ" --post_name="sitemap" --post_type="page" --post_status="publish" --page_template="default"
+$PREFIX wp post create page-contents/sitemap.txt --post_title="サイトマップ" --post_name="sitemap" --post_type="page" --post_status="publish" --page_template="default" --user="1"
 
 # プライバシーポリシー
-$PREFIX wp post create page-contents/privacy.txt --post_title="プライバシーポリシー" --post_name="privacy" --post_type="page" --post_status="publish" --page_template="default"
+$PREFIX wp post create page-contents/privacy.txt --post_title="プライバシーポリシー" --post_name="privacy" --post_type="page" --post_status="publish" --page_template="default" --user="1"
