@@ -18,9 +18,18 @@ esac
 # Download sample text files
 # 別にtxtファイルを用意した場合に上書きされるのを防ぐため、ダウンロードするか選択式に。
 # 
-
 read -p "Download Sample Text Files? [y/n]" DOWNLOAD_ANSWER
 
+
+# 
+# 同じパーマリンクのページを削除してから作成するかどうか
+# 
+read -p "Remove same permalink pages? [y/n]" REMOVE_ANSWER
+
+
+# 
+# Download sample text files
+# 
 case $DOWNLOAD_ANSWER in
 	"" | "Y" | "y" | "yes" | "Yes" | "YES" )
 
@@ -43,6 +52,28 @@ case $DOWNLOAD_ANSWER in
 		$DOWNLOAD_TXT_PREFIX curl -L -o page-contents/contact.html https://raw.githubusercontent.com/esnetk6/wp-cli-page-create-sample/master/page-contents/contact.html
 		$DOWNLOAD_TXT_PREFIX curl -L -o page-contents/sitemap.html https://raw.githubusercontent.com/esnetk6/wp-cli-page-create-sample/master/page-contents/sitemap.html
 		$DOWNLOAD_TXT_PREFIX curl -L -o page-contents/privacy.html https://raw.githubusercontent.com/esnetk6/wp-cli-page-create-sample/master/page-contents/privacy.html
+		;;
+
+esac
+
+
+# 
+# Remove same pages
+# 
+case $REMOVE_ANSWER in
+	"" | "Y" | "y" | "yes" | "Yes" | "YES" )
+
+		$PREFIX wp post delete --force $($PREFIX wp post list --name="company" --post_type="page" --field="ID")
+		$PREFIX wp post delete --force $($PREFIX wp post list --name="message" --post_type="page" --field="ID")
+		$PREFIX wp post delete --force $($PREFIX wp post list --name="history" --post_type="page" --field="ID")
+		$PREFIX wp post delete --force $($PREFIX wp post list --name="access" --post_type="page" --field="ID")
+		$PREFIX wp post delete --force $($PREFIX wp post list --name="facility" --post_type="page" --field="ID")
+		$PREFIX wp post delete --force $($PREFIX wp post list --name="business" --post_type="page" --field="ID")
+		$PREFIX wp post delete --force $($PREFIX wp post list --name="recruit" --post_type="page" --field="ID")
+		$PREFIX wp post delete --force $($PREFIX wp post list --name="faq" --post_type="page" --field="ID")
+		$PREFIX wp post delete --force $($PREFIX wp post list --name="contact" --post_type="page" --field="ID")
+		$PREFIX wp post delete --force $($PREFIX wp post list --name="sitemap" --post_type="page" --field="ID")
+		$PREFIX wp post delete --force $($PREFIX wp post list --name="privacy" --post_type="page" --field="ID")
 		;;
 
 esac
